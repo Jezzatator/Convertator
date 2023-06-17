@@ -19,25 +19,25 @@ struct ContentView: View {
     var Results : Double {
         var results : Double = 0
         // converti Celsius en Far
-        if inputUnit == "°C" && outputUnit == "°F"{
+        if inputUnit == unit[0] && outputUnit == unit[1]{
             results = inputNumber * 9/5 + 32
             return results
         } // converti Celsius en Kelvin
-        else if inputUnit == "°C" && outputUnit == "K" {
+        else if inputUnit == unit[0] && outputUnit == unit[2] {
             results = inputNumber + 273.15
             return results
         } // Converti Far en Celsius
-        else if  inputUnit == "°F" && outputUnit == "°C" {
+        else if  inputUnit == unit[1] && outputUnit == unit[0] {
             results = (inputNumber - 32) * (5/9)
             return results
         } // blabla
-        else if inputUnit == "°F" && outputUnit == "K" {
+        else if inputUnit == unit[1] && outputUnit == unit[2] {
             results = (inputNumber - 32) * (5/9) + 273.15
             return results
-        } else if inputUnit == "K" && outputUnit == "°C" {
+        } else if inputUnit == unit[2] && outputUnit == unit[0] {
             results = inputNumber - 273.15
             return results
-        } else if inputUnit == "K" && outputUnit == "°F" {
+        } else if inputUnit == unit[2] && outputUnit == unit[1] {
             results = (inputNumber - 273.15) * 9/5 + 32
             return results
         } else {
@@ -47,8 +47,34 @@ struct ContentView: View {
     }
         
     var body: some View {
-        NavigationView {
-            Form {
+        NavigationView{
+            TabView {
+                tab1
+                    .tabItem {
+                        Label("Tab 1", systemImage: "circle")
+                    }
+                tab2
+                    .tabItem {
+                        Label("Tab 2", systemImage: "circle")
+                    }
+                tab3
+                    .tabItem {
+                        Label("Tab 3", systemImage: "circle")
+                    }
+            }
+            .tabViewStyle(.page)
+            .navigationTitle("Convertator")
+                }
+            }
+
+    private var tab1: some View {
+        VStack(alignment: .leading){
+            HStack{
+                Image(systemName: "thermometer.sun.fill").padding(.leading).font(.title)
+                
+                Text("Température").font(.title)
+            }
+        Form {
                 Section {
                     TextField("Valeur", value: $inputNumber, format: .number)
                         .keyboardType(.decimalPad)
@@ -73,10 +99,43 @@ struct ContentView: View {
                     Text("Résultat")
                 }
             }
-            .navigationTitle("Convertator")
         }
     }
+    }
+
+private var tab2: some View {
+    ZStack {
+        LinearGradient(colors: [.orange, .yellow], startPoint: .top, endPoint: .bottom)
+            .ignoresSafeArea()
+        VStack(alignment: .leading) {
+            Image(systemName: "swift")
+            Text("Welcome to")
+                .foregroundColor(.black)
+            Text("iOSDevX Page 2")
+        }
+        .foregroundColor(.white)
+        .font(.largeTitle)
+        .fontWeight(.black)
+    }
 }
+private var tab3: some View {
+    ZStack {
+        LinearGradient(colors: [.yellow, .green], startPoint: .top, endPoint: .bottom)
+            .ignoresSafeArea()
+        VStack(alignment: .leading) {
+            Image(systemName: "swift")
+            Text("Welcome to")
+                .foregroundColor(.black)
+            Text("iOSDevX Page 3")
+        }
+        .foregroundColor(.white)
+        .font(.largeTitle)
+        .fontWeight(.black)
+    }
+}
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
