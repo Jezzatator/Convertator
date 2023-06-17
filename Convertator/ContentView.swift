@@ -65,7 +65,6 @@ struct ContentView: View {
                     }
             }
             .tabViewStyle(.page)
-            .navigationTitle("Convertator")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
@@ -109,6 +108,7 @@ struct ContentView: View {
                 } header: {
                     Text("Résultat")
                 }
+                .navigationTitle("Convertator")
             }
         }
     }
