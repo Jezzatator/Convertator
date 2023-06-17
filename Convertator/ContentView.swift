@@ -12,6 +12,8 @@ struct ContentView: View {
     @State var inputNumber = 0.0
     @State var inputUnit: String = "°C"
     @State var outputUnit: String = "°F"
+    @FocusState private var amountIsFocused: Bool
+
     
     let unit = ["°C", "°F", "K"]
     
@@ -64,10 +66,18 @@ struct ContentView: View {
             }
             .tabViewStyle(.page)
             .navigationTitle("Convertator")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Fini") {
+                        amountIsFocused = false
+                    }
                 }
             }
+            }
+            }
 
-    private var tab1: some View {
+   private var tab1: some View {
         VStack(alignment: .leading){
             HStack{
                 Image(systemName: "thermometer.sun.fill").padding(.leading).font(.title)
@@ -78,6 +88,7 @@ struct ContentView: View {
                 Section {
                     TextField("Valeur", value: $inputNumber, format: .number)
                         .keyboardType(.decimalPad)
+                        .focused($amountIsFocused)
                     Picker("Unité", selection: $inputUnit) {
                         ForEach(unit, id: \.self) {
                             Text($0)
@@ -105,32 +116,14 @@ struct ContentView: View {
 
 private var tab2: some View {
     ZStack {
-        LinearGradient(colors: [.orange, .yellow], startPoint: .top, endPoint: .bottom)
-            .ignoresSafeArea()
-        VStack(alignment: .leading) {
-            Image(systemName: "swift")
-            Text("Welcome to")
-                .foregroundColor(.black)
-            Text("iOSDevX Page 2")
-        }
-        .foregroundColor(.white)
-        .font(.largeTitle)
-        .fontWeight(.black)
+        Text("Hello, World!")
+             .padding()
     }
 }
 private var tab3: some View {
     ZStack {
-        LinearGradient(colors: [.yellow, .green], startPoint: .top, endPoint: .bottom)
-            .ignoresSafeArea()
-        VStack(alignment: .leading) {
-            Image(systemName: "swift")
-            Text("Welcome to")
-                .foregroundColor(.black)
-            Text("iOSDevX Page 3")
-        }
-        .foregroundColor(.white)
-        .font(.largeTitle)
-        .fontWeight(.black)
+       Text("Hello, World!")
+            .padding()
     }
 }
 
