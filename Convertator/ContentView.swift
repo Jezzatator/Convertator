@@ -116,8 +116,7 @@ struct ContentView: View {
 
 private var tab2: some View {
     ZStack {
-        Text("Hello, World!")
-             .padding()
+       Volumes()
     }
 }
 private var tab3: some View {
