@@ -121,8 +121,7 @@ private var tab2: some View {
 }
 private var tab3: some View {
     ZStack {
-       Text("Hello, World!")
-            .padding()
+        Longueurs()
     }
 }
 

@@ -22,6 +22,7 @@ struct Volumes: View {
          var inputValue: Double = inputNumber
          var result: Double = 0
          
+         // Convertir la valeur d'entrée en m3
          switch inputUnit {
              case unit[1]: // dm³
                  inputValue /= 1000
