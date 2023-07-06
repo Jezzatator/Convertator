@@ -1,0 +1,24 @@
+/*
+  Localizable.strings
+  Convertator
+
+  Created by Jérémie - Ada on 06/07/2023.
+  
+*/
+
+//Intro
+"Bienvenue.intro" = "Benvingut a Convertator !";
+
+//Titres
+"Volumes.titre" = "Volum";
+"Température.titre" = "Temperatura";
+"Longueurs.titre" = "Longituds";
+
+//Strings redondant
+"Valeur" = "Valor";
+"Unité" = "Unitat";
+"Insérez" = "Insereix un valor per convertir";
+"Résultat" = "Resultat";
+
+//Bouton clavier
+"Fini" = "OK";

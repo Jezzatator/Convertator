@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Convertator
+
+  Created by Jérémie - Ada on 06/07/2023.
+  
+*/
+
+//Intro
+"Bienvenue.intro" = "Хуш омадед ба Konvertator!";
+
+//Titres
+"Volumes.titre" = "Ҳаҷм";
+"Température.titre" = "Ҳарорат";
+"Longueurs.titre" = "Дарозӣ";
+
+//Strings redondant
+"Valeur" = "Арзиш";
+"Unité" = "Воҳиди";
+"Insérez" = "Барои табдил додан арзиш ворид кунед";
+"Résultat" = "Натиҷа";
+"Convertator" = "Konvertator"
+
+//Bouton clavier
+"Fini" = "тамом";
+

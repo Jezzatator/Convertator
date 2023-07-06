@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Convertator
+
+  Created by Jérémie - Ada on 06/07/2023.
+  
+*/
+
+//Intro
+"Bienvenue.intro" = "به کونورتاتور خوش آمدید!";
+
+//Titres
+"Volumes.titre" = "حجم";
+"Température.titre" = "دما";
+"Longueurs.titre" = "طول";
+"Convertator" = "کونورتاتور";
+
+//Strings redondant
+"Valeur" = "مقدار";
+"Unité" = "واحد";
+"Insérez" = "در اینجا یک مقدار برای تبدیل وارد کنید";
+"Résultat" = "نتیجه";
+
+//Bouton clavier
+"Fini" = "تمام";
+
