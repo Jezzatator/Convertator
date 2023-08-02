@@ -19,11 +19,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd /Convertator/Convertator.xcodeproj
+          cd Convertator
           # Commandes pour installer les dépendances, si nécessaire
 
       - name: Build and run tests
         run: |
-          cd /Convertator/Convertator.xcodeproj
-          xcodebuild test -scheme Convertator -destination 'platform=iOS Simulator,name=iPhone 14'
-          # Remplacez par votre nom de schéma et votre destination cible
+            cd Convertator
+            xcodebuild test -scheme Convertator -destination 'platform=iOS Simulator,name=iPhone 14'
