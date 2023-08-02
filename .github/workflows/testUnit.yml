@@ -10,19 +10,18 @@ jobs:
 
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set up Xcode
         uses: actions/setup-xcode@v2
         with:
-          xcode-version: '14.3' # Remplacez par la version d'Xcode que vous souhaitez utiliser
+          xcode-version: '14.3'
 
       - name: Install dependencies
         run: |
           cd Convertator
-          # Commandes pour installer les dépendances, si nécessaire
 
       - name: Build and run tests
         run: |
             cd Convertator
-            xcodebuild test -scheme ConvertatorTests -destination 'platform=iOS Simulator,name=iPhone 14'
+            xcodebuild test -scheme Convertator -destination 'platform=iOS Simulator,name=iPhone 14'
