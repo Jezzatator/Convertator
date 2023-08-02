@@ -2,7 +2,7 @@ name: Run Unit Tests
 
 on:
   pull:
-    branches: - **
+    branches: [main]
 
 jobs:
   test:
