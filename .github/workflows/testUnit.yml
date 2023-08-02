@@ -1,8 +1,8 @@
 name: Run Unit Tests
 
 on:
-  push:
-    branches: [${{ github.event.repository.default_branch }}]
+  pull:
+    branches: - **
 
 jobs:
   test:
