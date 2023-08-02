@@ -25,4 +25,4 @@ jobs:
       - name: Build and run tests
         run: |
             cd Convertator
-            xcodebuild test -scheme Convertator -destination 'platform=iOS Simulator,name=iPhone 14'
+            xcodebuild test -scheme ConvertatorTests -destination 'platform=iOS Simulator,name=iPhone 14'
