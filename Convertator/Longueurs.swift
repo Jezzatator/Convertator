@@ -35,7 +35,10 @@ struct Longueurs: View {
                     Text("Insérez")
                 }
                 Section {
-                    Text(viewModel.ResultsLong().formatted())
+                    Text(viewModel.ResultsLong(inputNumber: viewModel.inputNumber,
+                                               inputUnit: viewModel.inputUnit,
+                                               outputUnit: viewModel.outputUnit)
+                        .formatted())
                     Picker("Unité", selection: $viewModel.outputUnit) {
                         ForEach(Longueurs.ViewModel.unit, id: \.self) {
                             Text($0)

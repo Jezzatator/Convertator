@@ -13,7 +13,7 @@ struct Volumes: View {
     @FocusState private var amountIsFocused: Bool
 
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             HStack{
                 Image(systemName: "testtube.2").padding(.leading).font(.title)
                 

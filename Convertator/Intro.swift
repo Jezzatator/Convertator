@@ -12,6 +12,7 @@ struct Intro: View {
         Section  {
             Text("Bienvenue.intro")
         }
+        .navigationTitle("Convertator")
     }
 }
 
