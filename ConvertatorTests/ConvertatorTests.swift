@@ -12,47 +12,57 @@ import XCTest
 
 final class ConvertatorTests: XCTestCase {
     
-    private var sut: Longueurs.ViewModel!
+    private var sutLong: Longueurs.ViewModel!
+    private var sutTem: Temperature.ViewModel!
     
     @MainActor override func setUpWithError() throws {
-        sut = Longueurs.ViewModel()
+        sutLong = Longueurs.ViewModel()
+        sutTem = Temperature.ViewModel()
     }
     
     override func tearDownWithError() throws {
-        sut = nil
+        sutLong = nil
+        sutTem = nil
     }
     
-    @MainActor func test_convert10_return1093613() {
-        let actual = sut.ResultsLong(inputNumber: 10, inputUnit: "m", outputUnit: "yd")
+    @MainActor func test_convert10_return1093613LONG() {
+        let actual = sutLong.ResultsLong(inputNumber: 10, inputUnit: "m", outputUnit: "yd")
         let expected = 10.93613298338
         
         XCTAssertEqual(actual, expected)
     }
     
-    @MainActor func test_convert34543455_return21464307817() {
-        let actual = sut.ResultsLong(inputNumber: 34543455, inputUnit: "mm", outputUnit: "in")
+    @MainActor func test_convert34543455_return21464307817LONG() {
+        let actual = sutLong.ResultsLong(inputNumber: 34543455, inputUnit: "mm", outputUnit: "in")
         let expected = 1359978.5433070867
         
         XCTAssertEqual(actual, expected)
     }
     
-    @MainActor func test_convertNeg34543455_returnNeg21464307817() {
-        let actual = sut.ResultsLong(inputNumber: -34543455, inputUnit: "mm", outputUnit: "in")
+    @MainActor func test_convertNeg34543455_returnNeg21464307817LONG() {
+        let actual = sutLong.ResultsLong(inputNumber: -34543455, inputUnit: "mm", outputUnit: "in")
         let expected = -1359978.5433070867
         
         XCTAssertEqual(actual, expected)
     }
     
-    @MainActor func test_convert0_return0() {
-        let actual = sut.ResultsLong(inputNumber: 0.0 , inputUnit: "mm", outputUnit: "in")
+    @MainActor func test_convert0_return0LONG() {
+        let actual = sutLong.ResultsLong(inputNumber: 0.0 , inputUnit: "mm", outputUnit: "in")
         let expected = 0.0
         
         XCTAssertEqual(actual, expected)
     }
     
-    @MainActor func test_convertM_returnM() {
-        let actual = sut.ResultsLong(inputNumber: 55 , inputUnit: "m", outputUnit: "m")
+    @MainActor func test_convertM_returnMLONG() {
+        let actual = sutLong.ResultsLong(inputNumber: 55 , inputUnit: "m", outputUnit: "m")
         let expected = actual
+        
+        XCTAssertEqual(actual, expected)
+    }
+    
+    @MainActor func test_convert0C_return32FTEMP() {
+        let actual = sutTem.ResultsTemp(inputNumber: 0.0 , inputUnit: "°C", outputUnit: "°F")
+        let expected = 32.0
         
         XCTAssertEqual(actual, expected)
     }

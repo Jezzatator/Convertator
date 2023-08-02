@@ -14,9 +14,9 @@
             filePath = "ConvertatorTests/ConvertatorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "test_convert10_return1093613()"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "test_convert10_return1093613LONG()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "ConvertatorTests/ConvertatorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "test_convert10_return1093613()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "test_convert10_return1093613LONG()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

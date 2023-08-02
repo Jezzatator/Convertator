@@ -85,7 +85,7 @@ extension Temperature {
         
         public static let unit = ["°C", "°F", "K"]
         
-        func ResultsTemp() -> Double {
+        func ResultsTemp(inputNumber: Double, inputUnit: String, outputUnit: String) -> Double {
             var inputValue: Double = inputNumber
             var result : Double = 0
             

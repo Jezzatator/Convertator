@@ -34,7 +34,9 @@ struct Temperature: View {
                     Text("Insérez")
                 }
                 Section {
-                    Text(viewModel.ResultsTemp().formatted())
+                    Text(viewModel.ResultsTemp(inputNumber: viewModel.inputNumber,
+                                               inputUnit: viewModel.inputUnit,
+                                               outputUnit: viewModel.outputUnit).formatted())
                     Picker("Unité", selection: $viewModel.outputUnit) {
                         ForEach(Temperature.ViewModel.unit, id: \.self) {
                             Text($0)
