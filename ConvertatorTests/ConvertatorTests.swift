@@ -67,6 +67,34 @@ final class ConvertatorTests: XCTestCase {
         XCTAssertEqual(actual, expected)
     }
     
+    @MainActor func test_convert0F_returnNeg17777CTEMP() {
+        let actual = sutTem.ResultsTemp(inputNumber: 0.0 , inputUnit: "°F", outputUnit: "°C")
+        let expected = -17.77777777777778
+        
+        XCTAssertEqual(actual, expected)
+    }
+    
+    @MainActor func test_convert100C_return212FTEMP() {
+        let actual = sutTem.ResultsTemp(inputNumber: 100.0 , inputUnit: "°C", outputUnit: "°F")
+        let expected = 212.0
+        
+        XCTAssertEqual(actual, expected)
+    }
+    
+    @MainActor func test_convert0K_returnNeg459FTEMP() {
+        let actual = sutTem.ResultsTemp(inputNumber: 0.0 , inputUnit: "K", outputUnit: "°F")
+        let expected = -459.66999999999996
+        
+        XCTAssertEqual(actual, expected)
+    }
+    
+    @MainActor func test_convert0K_returnNeg273CTEMP() {
+        let actual = sutTem.ResultsTemp(inputNumber: 0.0 , inputUnit: "K", outputUnit: "°C")
+        let expected = -273.15
+        
+        XCTAssertEqual(actual, expected)
+    }
+    
     func test_SampleTest() {
         let actual = true
         
