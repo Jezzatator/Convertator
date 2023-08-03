@@ -23,4 +23,4 @@ jobs:
 
       - name: Build and run tests
         run: |
-            xcodebuild test -scheme Convertator -destination 'platform=iOS Simulator, id=dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name=Any iOS Simulator Device'
+            xcodebuild test -scheme Convertator -destination 'platform=iOS Simulator, name=Any iOS Simulator Device'
