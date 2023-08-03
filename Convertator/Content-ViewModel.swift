@@ -121,7 +121,8 @@ extension Volumes {
         
         public static let unit = ["m³", "dm³", "cm³", "l", "dl", "cl", "ml","fl oz UK", "fl oz US", "inch³", "ft³", "yard³", "gal UK", "gal US"]
         
-        func ResultsVol() -> Double {
+        func ResultsVol(inputNumber: Double, inputUnit: String, outputUnit: String) -> Double {
+            
             var inputValue: Double = inputNumber
             var result: Double = 0
             
@@ -144,7 +145,7 @@ extension Volumes {
             case Volumes.ViewModel.unit[8]: // fl oz US
                 inputValue /= 33814.022558919
             case Volumes.ViewModel.unit[9]: // inch³
-                inputValue /= 61023.7438368
+                inputValue /= 61023.744094732296875
             case Volumes.ViewModel.unit[10]: // ft³
                 inputValue /= 35.314666574328
             case Volumes.ViewModel.unit[11]: // yard³
@@ -176,7 +177,7 @@ extension Volumes {
                 case Volumes.ViewModel.unit[8]: // fl oz US
                     result = inputValue * 33814.022558919
                 case Volumes.ViewModel.unit[9]: // inch³
-                    result = inputValue * 61023.7438368
+                    result = inputValue * 61023.744094732296875
                 case Volumes.ViewModel.unit[10]: // ft³
                     result = inputValue * 35.314666574328
                 case Volumes.ViewModel.unit[11]: // yard³

@@ -34,7 +34,9 @@ struct Volumes: View {
                     Text("Insérez")
                 }
                 Section {
-                    Text(viewModel.ResultsVol().formatted())
+                    Text(viewModel.ResultsVol(inputNumber: viewModel.inputNumber,
+                                              inputUnit: viewModel.inputUnit,
+                                              outputUnit: viewModel.outputUnit).formatted())
                     Picker("Unité", selection: $viewModel.outputUnit) {
                         ForEach(Volumes.ViewModel.unit, id: \.self) {
                             Text($0)
