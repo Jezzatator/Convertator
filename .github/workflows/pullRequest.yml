@@ -27,8 +27,11 @@ jobs:
           key: ${{ runner.os }}-deps-v1-${{ hashFiles('BILDsolid.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
           restore-keys: ${{ runner.os }}-deps-v1-
  
-      - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1.5.1
+        with:
+            xcode-version: '14.2'
+
 
       - name: Run tests
         run: xcodebuild test -scheme Convertator -project Convertator.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.0' | xcpretty && exit ${PIPESTATUS[0]}
