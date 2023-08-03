@@ -34,4 +34,4 @@ jobs:
 
 
       - name: Run tests
-        run: xcodebuild test -scheme Convertator -project Convertator.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.0' | xcpretty && exit ${PIPESTATUS[0]}
+        run: xcodebuild test -scheme Convertator -project Convertator.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 14' | xcpretty && exit ${PIPESTATUS[0]}
