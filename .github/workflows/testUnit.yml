@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  run_tests:
     runs-on: macOS-latest
 
     steps:
@@ -27,5 +27,5 @@ jobs:
         run: |
           xcodebuild clean build analyze -scheme Convertator -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
     - name: Run unit tests
-        run:
+        run: |
         xcodebuild test -scheme BudgetOnTheGo -project Convertator.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 12,OS=$' | xcpretty && exit ${PIPESTATUS[0]}
