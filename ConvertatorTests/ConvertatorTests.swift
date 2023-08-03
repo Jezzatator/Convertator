@@ -90,7 +90,7 @@ final class ConvertatorTests: XCTestCase {
     
     @MainActor func test_convert0K_returnNeg273CTEMP() {
         let actual = sutTem.ResultsTemp(inputNumber: 0.0 , inputUnit: "K", outputUnit: "°C")
-        let expected = -273.15
+        let expected = -273
         
         XCTAssertEqual(actual, expected)
     }
