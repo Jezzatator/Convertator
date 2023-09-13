@@ -14,6 +14,12 @@ Ce projet m'a permit de prendre en mains notament :
   - l'intégration du workflow CI à l'aide de Github Actions pour automatiser les tests à chaque pulls
   - l'utilisation et la gestion de differentes vues
   - l'utilisation et la prise en charge de différentes langues et alphabets
+      - Français
+      - Anglais
+      - Espagnol
+      - Catalan
+      - Persan (alphabet arabo-persan)
+      - Tadjik (alphabet cyrillique)  
 
 
 ## Captures d'écran
